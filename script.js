@@ -29,6 +29,9 @@ const translations = {
         contact: "Kontakt",
         login: "Zaloguj się", // Dodane tłumaczenie
         register: "Zarejestruj się", // Dodane tłumaczenie
+        usernamePlaceholder: "Nazwa użytkownika", // Placeholder dla nazwy użytkownika
+        passwordPlaceholder: "Hasło", // Placeholder dla hasła
+        
     },
     en: {
         homeTitle: "Home Page",
@@ -45,6 +48,8 @@ const translations = {
         contact: "Contact",
         login: "Log In", // Dodane tłumaczenie
         register: "Register", // Dodane tłumaczenie
+        usernamePlaceholder: "Username", // Placeholder dla nazwy użytkownika
+        passwordPlaceholder: "Password", // Placeholder dla hasła
     }
 };
 
@@ -104,8 +109,8 @@ function loadLoginForm() {
         <div class="login-container">
             <h2>${translations[currentLanguage].login}</h2>
             <form id="loginForm" method="POST" action="login.php">
-                <input type="text" name="username" placeholder="Nazwa użytkownika" required>
-                <input type="password" name="password" placeholder="Hasło" required>
+                <input type="text" name="username" placeholder="${translations[currentLanguage].usernamePlaceholder}" required>
+                <input type="password" name="password" placeholder="${translations[currentLanguage].passwordPlaceholder}" required>
                 <button type="submit">${translations[currentLanguage].login}</button>
             </form>
             <p style="text-align: center;">${translations[currentLanguage].register} <a href="#" id="registerLink">Zarejestruj się</a></p>
@@ -121,8 +126,8 @@ function loadRegisterForm() {
         <div class="login-container">
             <h2>${translations[currentLanguage].register}</h2>
             <form id="registerForm" method="POST" action="register.php">
-                <input type="text" name="username" placeholder="Nazwa użytkownika" required>
-                <input type="password" name="password" placeholder="Hasło" required>
+                <input type="text" name="username" placeholder="${translations[currentLanguage].usernamePlaceholder}" required>
+                <input type="password" name="password" placeholder="${translations[currentLanguage].passwordPlaceholder}" required>
                 <button type="submit">${translations[currentLanguage].register}</button>
             </form>
             <p style="text-align: center;">${translations[currentLanguage].login} <a href="#" id="loginLinkBack">Zaloguj się</a></p>
