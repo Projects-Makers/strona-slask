@@ -13,12 +13,13 @@
             <div class="bar"></div>
         </div>
         <h1 style="color:white; text-align:center;"></h1>
+        <div id="login" style="color: white; margin-left: auto;">
+            <a href="#" id="loginLink" style="color: white; text-decoration: none;">Zaloguj się</a>
+        </div>
     </div>
 
     <div id="menu" class="menu">
-        <div class="close-btn" onclick="toggleMenu()">
-            &times; <!-- Symbol "X" -->
-        </div>
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
         <ul>
             <li id="home">Strona główna</li>
             <li id="about">O nas</li>
@@ -27,9 +28,9 @@
         </ul>
     </div>
 
-    <div id="structure">
-        <div id="tresc"></div>
-    </div>
+    <main id="tresc">
+        <!-- Wczytywana zawartość formularzy -->
+    </main>
 
     <script src="script.js"></script>
 </body>
