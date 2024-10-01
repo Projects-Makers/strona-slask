@@ -29,9 +29,7 @@ body {
 }
 
 #tresc {
-    background-color: #303845;
     padding: 20px;
-    color: white;
     height: 100vh; /* Treść zajmuje całą wysokość okna */
     margin-top: 100px; /* Odsunięcie treści od banera */
     overflow-y: auto;
@@ -89,6 +87,18 @@ body {
     margin-bottom: 20px;
     font-size: 24px;
     color: white;
+    transition: background-color 0.3s ease; /* Efekt płynnego przejścia */
+    padding: 10px; /* Dodanie przestrzeni wokół tekstu */
+    border-radius: 5px; /* Zaokrąglone rogi dla efektu */
+}
+
+.menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efekt podświetlenia na hover */
+    cursor: pointer; /* Zmiana kursora, aby wskazywał, że element jest klikalny */
+}
+
+.menu ul li#settings:hover {
+    background-color: rgba(0, 123, 255, 0.4); /* Inny kolor podświetlenia dla "Ustawienia" */
 }
 
 .close-btn {
@@ -109,4 +119,15 @@ body {
 
 .hamburger-btn.hidden {
     display: none;
+}
+
+/* Nowe style dla motywów */
+.light-theme {
+    background-color: #f8f9fa; /* Jasne tło */
+    color: black; /* Ciemny tekst */
+}
+
+.dark-theme {
+    background-color: #303845; /* Ciemne tło (aktualny motyw) */
+    color: white; /* Jasny tekst */
 }
