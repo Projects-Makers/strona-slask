@@ -9,8 +9,8 @@ body {
     background-size: cover;
     font-family: Arial, sans-serif;
     height: 100vh; /* Cała wysokość okna */
-    display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #baner {
@@ -34,6 +34,36 @@ body {
     height: 100vh; /* Treść zajmuje całą wysokość okna */
     margin-top: 100px; /* Odsunięcie treści od banera */
     overflow-y: auto;
+}
+
+#mapa {
+    margin: auto;
+    padding: auto;
+    margin-left: 40%;
+}
+
+#godlo {
+    background-image: url('herb.png');
+    background-size: 50px 50px;
+    margin-left: 60px;
+    background-repeat: no-repeat;
+}
+
+#godlo1 {
+    background-image: url('herb.png');
+    background-size: 50px 50px;
+    margin-left: 60px;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    margin-left: 430px;
+}
+
+#tyt {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    float: left;
+    margin-left: -2490px;
 }
 
 .hamburger-btn {
@@ -75,7 +105,7 @@ body {
 }
 
 .menu.open {
-    width: 400px;
+    width: 500px;
 }
 
 .menu ul {

@@ -1,3 +1,4 @@
+
 // Funkcja do przełączania widoczności menu
 function toggleMenu() {
     const menu = document.getElementById('menu');
