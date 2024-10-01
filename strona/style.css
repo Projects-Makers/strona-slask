@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ustalamy wysokość na 100% okna */
+}
+
+#baner {
+    width: 100%; /* Ustalamy pełną szerokość */
+    height: 100px; /* Wysokość banera */
+    background-color: #383E42;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed; /* Baner na górze, niezależnie od przesuwania strony */
+    top: 0;
+    left: 0;
+    z-index: 1001; /* Baner pod menu */
+}
+
+.hamburger-btn {
+    width: 50px; /* Szerokość jak przycisk X */
+    height: 50px; /* Wysokość jak przycisk X */
+    border: 2px solid white;
+    border-radius: 10px; /* Zaokrąglone rogi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Kreski będą bliżej siebie */
+    align-items: center;
+    gap: 4px; /* Zmniejszony odstęp między kreskami */
+    cursor: pointer;
+    background-color: #383E42;
+    position: absolute;
+    left: 20px; /* Umieszczenie w lewym górnym rogu */
+    top: 20px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 25px; /* Szerokość pasków */
+    height: 3px; /* Wysokość pasków */
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+.menu {
+    width: 0;
+    height: 100%; /* Ustalamy wysokość menu na 100% */
+    background-color: rgb(51, 45, 45);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1002; /* Menu nad banerem */
+    padding-top: 0; /* Menu zaczyna się od samej góry */
+}
+
+.menu.open {
+    width: 400px; /* Szerokość menu po otwarciu */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 100px 20px 20px 20px; /* Odstęp od góry, aby zawartość była pod przyciskiem "X" */
+    color: white;
+}
+
+.menu ul li {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+#tresc {
+    flex-grow: 1;
+    background-color: #303845;
+    padding: 20px;
+    color: white;
+    margin-top: 100px; /* Odsunięcie treści od banera */
+    height: calc(100vh - 100px); /* Wysokość treści dopasowana do widoku minus wysokość banera */
+    overflow-y: auto;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: white;
+    width: 50px; /* Kwadratowa obudowa */
+    height: 50px;
+    border: 2px solid white; /* Obwódka wokół X */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Przyciśnij do lewej krawędzi menu */
+    top: 20px;
+}
+
+.hamburger-btn.hidden {
+    display: none; /* Ukrycie przycisku hamburgera po otwarciu menu */
+}
