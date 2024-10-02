@@ -113,7 +113,7 @@ function loadLoginForm() {
                 <input type="password" name="password" placeholder="${translations[currentLanguage].passwordPlaceholder}" required>
                 <button type="submit">${translations[currentLanguage].login}</button>
             </form>
-            <p style="text-align: center;"><a href="#" id="registerLink">Zarejestruj się</a></p>
+            <p style="text-align: center;">${translations[currentLanguage].register} <a href="#" id="registerLink">Zarejestruj się</a></p>
         </div>
     `;
     document.getElementById('registerLink').addEventListener('click', loadRegisterForm);
