@@ -15,7 +15,7 @@ function toggleMenu() {
 // Obiekt z tłumaczeniami
 const translations = {
     pl: {
-        homeTitle: "Strona Główna",
+        Mapa: "Mapa",
         homeContent: "Witaj na stronie głównej!",
         settingsTitle: "Ustawienia",
         themeLabel: "Wybierz motyw:",
@@ -34,7 +34,7 @@ const translations = {
         
     },
     en: {
-        homeTitle: "Home Page",
+        Mapa: "Map",
         homeContent: "Welcome to the home page!",
         settingsTitle: "Settings",
         themeLabel: "Select theme:",
