@@ -15,7 +15,7 @@ function toggleMenu() {
 // Obiekt z tłumaczeniami
 const translations = {
     pl: {
-        Mapa: "Mapa",
+        homeTitle: "Strona Główna",
         homeContent: "Witaj na stronie głównej!",
         settingsTitle: "Ustawienia",
         themeLabel: "Wybierz motyw:",
@@ -34,7 +34,7 @@ const translations = {
         
     },
     en: {
-        Mapa: "Map",
+        homeTitle: "Home Page",
         homeContent: "Welcome to the home page!",
         settingsTitle: "Settings",
         themeLabel: "Select theme:",
@@ -64,7 +64,7 @@ function renderHomePage(lang) {
     const tresc = document.getElementById('tresc');
     tresc.innerHTML = `
         <h2>${translations[lang].homeTitle}</h2>
-        <p>${translations[lang].Mapa}</p>
+        <p>${translations[lang].homeContent}</p>
     `;
 }
 
@@ -95,7 +95,7 @@ function renderSettings(lang) {
 // Funkcja do renderowania treści w menu
 function renderMenu(lang) {
     const menuItems = document.querySelectorAll('#menu ul li');
-    menuItems[0].textContent = translations[lang].Mapa; // Strona główna
+    menuItems[0].textContent = translations[lang].homeTitle; // Strona główna
     menuItems[1].textContent = translations[lang].about; // O nas
     menuItems[2].textContent = translations[lang].gallery; // Galeria
     menuItems[3].textContent = translations[lang].settingsTitle; // Ustawienia
@@ -113,7 +113,7 @@ function loadLoginForm() {
                 <input type="password" name="password" placeholder="${translations[currentLanguage].passwordPlaceholder}" required>
                 <button type="submit">${translations[currentLanguage].login}</button>
             </form>
-            <p style="text-align: center;">${translations[currentLanguage].register} <a href="#" id="registerLink">Zarejestruj się</a></p>
+            <p style="text-align: center;"><a href="#" id="registerLink">Zarejestruj się</a></p>
         </div>
     `;
     document.getElementById('registerLink').addEventListener('click', loadRegisterForm);
@@ -130,7 +130,7 @@ function loadRegisterForm() {
                 <input type="password" name="password" placeholder="${translations[currentLanguage].passwordPlaceholder}" required>
                 <button type="submit">${translations[currentLanguage].register}</button>
             </form>
-            <p style="text-align: center;">${translations[currentLanguage].login} <a href="#" id="loginLinkBack">Zaloguj się</a></p>
+            <p style="text-align: center;"><a href="#" id="loginLinkBack">Zaloguj się</a></p>
         </div>
     `;
     document.getElementById('loginLinkBack').addEventListener('click', loadLoginForm);
