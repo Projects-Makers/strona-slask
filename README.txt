@@ -2,4 +2,4 @@
 robimy strone
 
 hosting darmowy
-https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account
+https://gist.github.com/bmaupin/0ce79806467804fdbbf8761970511b8c
